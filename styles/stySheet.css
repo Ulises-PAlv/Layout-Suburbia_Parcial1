@@ -1,0 +1,693 @@
+/*
+    ?? MAIN CSS
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /*1rem = 10px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*
+    !! GLOBALES
+*/
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+p, span, a {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    background-color: white;
+}
+
+footer {
+    background-color: rgb(72, 67, 67);
+}
+
+ul {
+    list-style: none;
+}
+
+h3 {
+    font-size: 4rem;
+    color: rgb(115, 35, 191);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+hr {
+    background-color: rgb(94, 29, 121);
+    width: 80%;
+}
+
+/*#### Utilidades ####*/
+
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.alin-centro {
+    text-align: center;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dFlex-50 {
+    flex-basis: calc(50% - 2rem);
+}
+
+.dFlex-50-med {
+    flex-basis: calc(40% - 2rem);
+}
+
+.dFlex-25 {
+    flex-basis: calc(25% - 1rem);
+}
+
+.dFlex-75 {
+    flex-basis: calc(75% - 2rem);
+}
+
+.dFlex-33 {
+    flex-basis: calc(33.3% - 2rem);
+}
+
+.mb-med {
+    margin-bottom: 2rem;
+}
+
+.mb-xl {
+    margin-bottom: 5rem;
+}
+
+.mt-2 {
+    margin-top: 2rem;
+}
+
+.mr-2 {
+    margin-right: 2rem;
+}
+
+.containerImg {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.parallax::before{
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    filter: brightness(.8);
+    -webkit-filter: brightness(.8);
+}
+
+.contador{
+    position: relative;
+    height: auto;
+}
+
+.contador::before{
+    background-image: url(../assetss/img/parallax.jpg);
+    content: '';
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ** Navbar
+*/
+
+    nav {
+        margin: 0;
+    }
+
+    .nav1, .nav2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #logo {
+        flex-basis: calc(14% - 1rem);
+    }
+
+    .search {
+        flex-basis: calc(62% - 2rem);
+    }
+
+    .nav1-side {
+        flex-basis: calc(16% - 1rem);
+    }
+
+    .nav1Shop {
+        flex-basis: calc(6% - .5rem);
+    }
+
+    .nav1 img {
+        width: 15rem;
+    }
+
+    .topnav {
+        margin-top: 1.2rem;
+        margin-left: 3rem;
+    }
+
+    .topnav input {
+        width: 70rem;
+        height: 3.3rem;
+        border: solid gray 1px !important;
+    }
+
+    .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+    }
+
+    .topnav .search-container button {
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: rgb(255, 255, 255);
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+        height: 3.3rem;
+    }
+
+    .topnav .search-container button i {
+        color: rgb(177, 44, 198);
+    }
+
+    .topnav .search-container button:hover {
+        background: rgb(237, 235, 235);
+    }
+
+    .nav1-side a {
+        margin-top: 2.8rem;
+        align-items: center;
+        color: black;
+        margin-right: .8rem;
+        font-size: 1.6rem;
+        display: inline-block;
+    }
+
+    .nav1-side a:hover {
+        color: rgb(169, 58, 169);
+    }
+
+    .nav1Shop a img {
+        margin-top: 1.8rem;
+    }
+
+    .nav2 {
+        background-color: rgb(85, 44, 123);
+    }
+
+    .nav2-1 {
+        flex-basis: calc(80% - 2rem);
+    }
+
+    .nav2-2 {
+        flex-basis: calc(20% - 2rem);
+    }
+
+    .navA-container {
+        display: inline-block;
+        height: 3.5rem;
+        margin-right: 2rem;
+        align-items: center;
+    }
+
+    .navA-container a {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .navA-container a:hover {
+        color: wheat;
+    }
+
+    .menuDesp {
+        display: none;
+        margin-top: 0;
+        position: absolute;
+        min-width: 16rem;
+        transition: all 1s ease-in-out;
+    }
+
+    #desplegableIndex:hover ul.menuDesp {
+        display: block;
+    }
+
+    .menuDesp > li {
+        background-color: rgb(234, 231, 231);
+        width: 15rem;
+        height: 5rem;
+        font-size: 1.6rem;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        padding-left: 1rem;
+        padding-top: 1.5rem;
+        transition: all .5s ease-in-out;
+    }
+
+    .menuDesp li i{
+        float: right;
+        margin-right: 1rem;
+        color: rgb(24, 24, 24);
+    }
+
+    .menuDesp > li:hover {
+        background-color: rgb(215, 206, 206);
+    }
+
+    /*
+    !! BANNER
+    */
+
+    .banner {
+        background-image: url(../assetss/img/bannerHOME.jpeg);
+        background-position: center center;
+        background-size: cover;
+        height: 70vh;
+    }
+
+    /*
+        ## MAIN
+    */
+
+    main {
+        background-color: whitesmoke;
+    }
+
+    .xd p {
+        float: left;
+        font-size: 1.5rem;
+        color: black;
+        margin: 0;
+    }
+
+    .xd a {
+        float: right;
+        color: blueviolet;
+        text-decoration: underline;
+        font-size: 1.5rem;
+    }
+
+    .funkos img {
+        width: 16rem;
+        display: inline-block;
+        margin: 2rem 1.7rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .funkos img:hover {
+        filter: grayscale(.8);
+    }
+
+    .contPub img {
+        width: 50rem;
+    }
+
+    /** Nosotros */
+
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+    .encabezado-nosotros {
+        text-align: center;
+        font-weight: 300;
+    }
+    
+    .icono {
+        text-align: center;
+    }
+
+    .icono img {
+        width: 8rem;
+    }
+    
+    .icono {
+        flex-basis: calc(25% - 1.2rem);
+    }
+    
+    .icono h3 {
+        text-transform: uppercase;
+        font-size: 1.9rem;
+    }
+
+    .icono h3 span {
+        color: blueviolet;
+    }
+
+    .icono p {
+        font-size: 1.7rem;
+        color: rgb(96, 47, 96);
+    }
+
+    .icono p span {
+        font-weight: bolder;
+        color: rgb(208, 43, 226);
+    }
+    
+    /** FOOTER */
+
+    .containFooter {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .listFooter h5 {
+        font-weight: bolder;
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: 3rem;
+    }
+
+    .listFooter a {
+        display: block;
+        font-size: 1.2rem;
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    .listFooter a:hover {
+        color: rgb(43, 177, 226);
+    }
+
+    .listFooter div p {
+        color: white;
+        font-size: 1.3rem;
+        margin-bottom: .2rem;
+    }
+
+    .listFooter div span {
+        color: rgb(184, 176, 176);
+        font-size: 1.1rem;
+    }
+
+    .button-footer {
+        color: white;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+        width: 100%;
+        height: 2.4rem;
+        background-color: rgba(128, 128, 128, 0.071);
+        border: solid 2px rgb(195, 187, 187);
+        transition: all .5s ease-in-out;
+    }
+
+    .button-footer:hover {
+        background-color: rgb(55, 53, 53);
+        text-decoration: underline;
+    }
+
+    .footerRecursivo {
+        background-color: rgba(120, 116, 116, 0.468);
+    }
+
+    .ffContainer {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .redesSociales {
+        flex-basis: calc(40% - .5rem);
+    }
+
+    .redesSociales a i {
+        font-size: 1.5rem;
+        color: rgba(220, 215, 215, 0.544);
+        margin-right: 1.5rem;
+        margin-top: .7rem;
+        transition: color .3s ease-in-out;
+    }
+
+    .redesSociales a i:hover {
+        color: rgba(220, 215, 215, 0.811);;
+    }
+
+    .ancla {
+        flex-basis: calc(30% - .5rem);
+    }
+
+    .ancla a {
+        color: rgb(220, 215, 215);
+    }
+
+    .terminos {
+        flex-basis: calc(30% - .5rem);
+        color: rgb(220, 215, 215);
+    }
+
+    .terminos a {
+        color: rgb(220, 215, 215);
+    }
+
+    /*#########################################################################################################################################*/
+
+    /* ?? Pagina 1 : Mis pedidos*/
+
+    .pedidos {
+        border: solid rgb(232, 230, 230) 1px;
+        border-radius: .5rem;
+        transition: all .4s ease-in-out;
+    }
+
+    .pedidos:hover {
+        -webkit-box-shadow: 6px 7px 20px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 6px 7px 20px -2px rgba(0,0,0,0.75);
+        box-shadow: 6px 7px 20px -2px rgba(0,0,0,0.75);
+    }
+
+    .pedidos th {
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.4rem;
+        color: rgb(118, 112, 112);
+        text-align: center;
+    }
+
+    .pedidoRow td img {
+        width: 31rem;
+        transition: all .3s ease-in-out;
+    }
+
+    .pedidoRow td img:hover {
+        -webkit-transform: scale(0.95);
+    }
+
+    .pedidoRow td {
+        border-bottom: solid rgba(128, 128, 128, 0.297) 1px;
+    }
+
+    .pedidoRow td p {
+        font-size: 1.6rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .pedidoRow td p span {
+        color: rgb(171, 43, 226);
+    }
+
+    .containCupon {
+        border: solid rgba(96, 2, 164, 0.482) 2px;
+        border-radius: 1rem;
+    }
+
+    .formCupon {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .btn-cupon {
+        width: 100%;
+        background-color: rgba(163, 14, 179, 0.325);
+        border: solid indigo 1px;
+        border-radius: .3rem;
+        text-align: center;
+        height: 2rem;
+        transition: background-color .3s ease-in-out;
+    }
+
+    .btn-cupon:hover {
+        background-color: rgba(163, 14, 179, 0.804);
+    }
+
+    .form p {
+        font-size: 1.1rem;
+    }
+
+    .form label {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.1rem;
+    }
+
+    /*############################################################################################################################################################*/
+
+    /*
+        ?? Pagina 2 : Blog
+    */
+
+    .evento{
+        position: relative;
+        padding: 12rem 0;
+    }
+    
+    .evento h2{
+        width: 50%;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        font-size: 4.6rem;
+    }
+
+    .entrada-blog {
+        display: flex;
+        margin: 1rem 4rem;
+    }
+
+    .imagen {
+        flex-basis: 40%;
+        margin-right: 1rem;
+    }
+
+    .entrada-blog .imagen img {
+        border-radius: .5rem;
+    }
+
+    .texto-entrada {
+        flex-basis: 60%;
+    }
+
+    .texto-entrada p {
+        font-size: 1.1rem;
+    }
+
+    .blogHR {
+        width: 75%;
+        background-color: rgb(94, 22, 160);
+        height: .2rem;
+        margin-left: 0;
+    }
+
+    .texto-entrada {
+        margin-top: 0;
+    }
+
+    .texto-entrada a h4 {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .iframeContent {
+        width: 40%;
+        margin: 3rem auto;
+    }
+
+    .contactForm {
+        background-color: rgba(225, 225, 225, 0.345);
+    }
+
+    .contactForm textarea {
+        border: solid rgba(225, 49, 199, 0.544) 1px;
+        border-radius: .6rem;
+        margin: 2rem auto;
+    }
+
+    .contactForm form legend {
+        padding-top: 1rem;
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.7rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .contactForm form label, .enunciadoC {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.3rem;
+        margin-right: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .contactForm form input {
+        width: 90%;
+        height: 3rem;
+        border: solid rgba(225, 49, 199, 0.544) 1px;
+        border-radius: .6rem;
+        margin: 2rem auto;
+    }
+
+    .btnContact {
+        margin: 1.5rem auto;
+        width: 50%;
+        background-color: rgba(149, 62, 230, 0.66);
+        color: white;
+        height: 3.5rem;
+        border: none;
+        border-radius: 1rem;
+        display: block;
+    }
+
+    .btnContact:hover {
+        background-color: rgba(156, 66, 240, 0.879);
+    }
+
